@@ -1,1 +1,48 @@
-<p>signup works!</p>
+<style>
+     .footer-text{
+        color: rgba(255, 255, 255, 0.6);
+        width: 100%;
+        margin: 50px auto;
+      }
+</style>
+
+<div class="h-screen bg-[#1E2F65]">
+    <app-header></app-header>
+    <div class="w-full flex flex-col justify-between items-center text-white p-3">
+        
+        <div  class="w-1/4">
+            <div class="border-b-2 border-[#39B7E9] pb-2">
+              <ul class="flex">
+                <li  class="mr-8 cursor-pointer text-sm"><a routerLink="/login">Login</a></li>
+                <li class="cursor-pointer text-sm"><a routerLink="/signup"> Sign Up</a> </li>
+              </ul>
+            </div>
+        <div>
+        <div>
+            <p class="p-3">Enter your phone number to create your account.</p>
+        </div>
+        <div class="flex text-[#909090] my-9">
+            <select name="" id="" placeholder="+234" class="mx-2 rounded-xl p-1">
+                <option value="NIG">+234</option>
+            </select>
+            <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+        </div>
+        <div class="w-11/12 my-9">
+            <input type="submit" value="Proceed" class="w-11/12 rounded-xl my-2.5 p-0.5 bg-[#39B7E9]">
+        </div>
+        <div>
+            <p class="text-sm">Already have an account? <a routerLink="/login" class="text-[#39B7E9]">Login</a></p>
+        </div>
+    </div>
+
+    <div>
+        <div class="fixed bottom-0 text-center">
+            <div class="flex m-9">
+              <p class="footer-text">© 2022 Copyright Helppo Africa. All rights reserved</p>
+            </div>
+          </div>
+          <div class="fixed bottom-0 left-0">
+            <img src="assets/icons/bottom-img.svg" alt="">
+          </div>
+    </div> 
+</div>

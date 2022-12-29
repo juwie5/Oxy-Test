@@ -15,7 +15,7 @@ export class LoginComponent {
   }
 
   goToReset(){
-    this.router.navigate(["/reset"]);
+   this.router.navigate(["/reset"]);
   }
 
 }
