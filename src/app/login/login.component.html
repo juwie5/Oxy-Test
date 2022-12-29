@@ -1,0 +1,22 @@
+<div class="mt-4">
+    <p class="mb-6">Enter your credentials to access your Account.</p>
+    <div>
+      <input type="text" placeholder="Username/email" class="w-11/12 rounded-xl my-2.5 p-2">
+    </div>
+    <div>
+      <input type="password" placeholder="Password" class="w-11/12 rounded-xl my-2.5 p-2">
+    </div>
+    <div class="flex justify-between">
+       <div class="flex">
+         <input type="checkbox">
+          <label class="text-xs ml-1">Remember me</label>
+       </div>
+       <div>
+         <p class="text-[#39B7E9] text-xs" [routerLink]="['/reset']">Forgot your password?</p>
+       </div>
+    </div>
+    <div class="mt-9">
+        <input type="submit" value="Log in" class="w-11/12 rounded-xl my-2.5 p-2 bg-[#39B7E9]">
+    </div>
+  </div>
+  
