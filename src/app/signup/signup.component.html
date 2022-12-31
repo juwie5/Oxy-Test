@@ -9,31 +9,92 @@
 <div class="h-screen bg-[#1E2F65]">
     <app-header></app-header>
     <div class="w-full flex flex-col justify-between items-center text-white p-3">
-        
-        <div  class="w-1/4">
-            <div class="border-b-2 border-[#39B7E9] pb-2">
+      <div *ngIf="sign"  class="w-1/4">
+        <div class="border-b-2 border-[#39B7E9] pb-2">
               <ul class="flex">
                 <li  class="mr-8 cursor-pointer text-sm"><a routerLink="/login">Login</a></li>
                 <li class="cursor-pointer text-sm"><a routerLink="/signup"> Sign Up</a> </li>
               </ul>
-            </div>
-        <div>
-        <div>
-            <p class="p-3">Enter your phone number to create your account.</p>
-        </div>
-        <div class="flex text-[#909090] my-9">
-            <select name="" id="" placeholder="+234" class="mx-2 rounded-xl p-1">
-                <option value="NIG">+234</option>
-            </select>
-            <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
-        </div>
-        <div class="w-11/12 my-9">
-            <input type="submit" value="Proceed" class="w-11/12 rounded-xl my-2.5 p-0.5 bg-[#39B7E9]">
         </div>
         <div>
-            <p class="text-sm">Already have an account? <a routerLink="/login" class="text-[#39B7E9]">Login</a></p>
-        </div>
+          <div>
+              <p class="p-3">Enter your phone number to create your account.</p>
+          </div>
+          <div class="flex text-[#909090] my-9">
+              <select name="" id="" placeholder="+234" class="mx-2 rounded-xl p-1">
+                  <option value="NIG">+234</option>
+              </select>
+              <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+          </div>
+          <div class="w-11/12 my-9">
+              <input type="submit" value="Proceed" class="w-11/12 rounded-xl my-2.5 p-0.5 bg-[#39B7E9]" (click)="onBoard()">
+          </div>
+          <div>
+              <p class="text-sm">Already have an account? <a routerLink="/login" class="text-[#39B7E9]">Login</a></p>
+          </div>
+      </div>
     </div>
+
+    <div *ngIf="show">
+      <div class="flex flex-col space-y-16">
+        <div>
+              <h2 class="text-[#39B7E9] text-2xl font-semibold">
+                We sent you a code
+              </h2>
+              <p class="font-light">Enter the 5 digit code sent to your phone number</p>
+        </div>
+          <div class="flex flex-row items-center justify-between mx-auto w-full max-w-sm text-black">
+            <div class="w-16 h-16 ">
+              <input class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700" type="text" name="" id="">
+            </div>
+            <div class="w-16 h-16 ">
+              <input class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700" type="text" name="" id="">
+            </div>
+            <div class="w-16 h-16 ">
+              <input class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700" type="text" name="" id="">
+            </div>
+            <div class="w-16 h-16 ">
+              <input class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700" type="text" name="" id="">
+            </div>
+              <div class="w-16 h-16 ">
+              <input class="w-full h-full flex flex-col items-center justify-center text-center px-5 outline-none rounded-xl border border-gray-200 text-lg bg-white focus:bg-gray-50 focus:ring-1 ring-blue-700" type="text" name="" id="">
+            </div> 
+          </div>
+
+          <div class="flex flex-col space-y-5">
+            <div class="flex justify-between text-[#39B7E9]">
+              <p>Send code again</p>
+              <p>Change phone number</p>
+            </div>
+            <div>
+              <button class="flex flex-row items-center justify-center text-center w-full border rounded-xl outline-none py-1.5 bg-[#39B7E9] border-none text-white text-sm shadow-sm">
+                Verify
+              </button>
+            </div>
+            <div>
+              <p class="text-sm">Already have an account? <a routerLink="/login" class="text-[#39B7E9]">Login</a></p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="flex flex-col">
+        <h2 class="text-[#39B7E9] text-2xl font-semibold">
+          Bio Data
+        </h2>
+        <p class="font-light">Complete your registration</p>
+      </div>
+      <div class="flex flex-col">
+        <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+        <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+        <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+        <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+        <input type="number"  class="mx-2 rounded-xl p-1" placeholder="Phone number">
+        
+      </div>
+    </div>
+   
 
     <div>
         <div class="fixed bottom-0 text-center">

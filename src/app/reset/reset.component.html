@@ -1,3 +1,21 @@
-<div>
-    <p>reset works</p>
+<div class="h-screen bg-[#1E2F65]">
+    <app-header></app-header>
+    <div class="flex justify-center items-center flex-col my-10 text-white">
+        <div>
+            <h2 class="text-[#39B7E9] text-2xl font-semibold">
+                Reset Account
+            </h2>
+            <p class="font-light">Enter your email to reset your account.</p>
+        </div>
+        <div class="my-5">
+            <input type="email" placeholder="Email Address" class="w-[400px] p-2 rounded-xl">
+            <div class="my-3">
+                <p class="text-sm">Remember your password? <a routerLink="/home" class="text-[#39B7E9]">Login</a></p>
+            </div>
+        </div>
+        <div class="my-5">
+            <input type="submit" value="Reset Account" class="w-[400px] p-2 rounded-xl bg-[#39B7E9]">
+        </div>
+    </div>
+    <app-footer></app-footer>
 </div>

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
+  show = false;
+  sign = true;
 
+  onBoard(){
+    this.show = true;
+    this.sign = false;
+  }
 }
